@@ -20,17 +20,17 @@ import com.revrobotics.RelativeEncoder;
 import com.revrobotics.CANSparkLowLevel.MotorType;
 public class SwerveModule extends SubsystemBase {
   /** Creates a new SwerveModule. */
-   public static CANSparkMax driveMotor;
-   public static CANSparkMax angleMotor;
+   public CANSparkMax driveMotor;
+   public CANSparkMax angleMotor;
    //public static AbsoluteEncoder m_absoluteEncoder;
    public static int kCPR = 4096;
-   public static boolean absoluteEncoderReversed;
-   public static double absoluteEncoderOffsetRad;
+   public boolean absoluteEncoderReversed;
+   public double absoluteEncoderOffsetRad;
 
-   public static RelativeEncoder m_driveEncoder;
-   public static RelativeEncoder m_angleEncoder;
+   public RelativeEncoder m_driveEncoder;
+   public RelativeEncoder m_angleEncoder;
 
-   public static PIDController m_anglePidController;
+   public PIDController m_anglePidController;
 
   public SwerveModule(int driveMotorID, int angleMotorID, boolean driveMotorReversed, boolean angleMotorReversed,
     double absoluteEncoderOffset, boolean absoluteEncoderReversed) {
